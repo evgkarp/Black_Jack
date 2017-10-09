@@ -37,11 +37,9 @@ class Game
     when 2 then next_move(@user)
     when 3 then showdown
     else
-      raise 'Введите число от 0 до 3'
+      puts 'Введите число от 0 до 3'
+      user_move
     end
-  rescue => e
-    puts e.message
-    retry
   end
 
   def dealer_move
